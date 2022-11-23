@@ -40,7 +40,7 @@ class IntroScreen extends StatelessWidget {
             Text(
               'Fresh items everyday',
               textAlign: TextAlign.center,
-              style: TextStyle(
+              style: GoogleFonts.montserrat(
                 fontSize: 16,
                 color: Colors.white,
               ),
