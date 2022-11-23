@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:shop_app/components/grocery_item_tile.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -39,8 +40,33 @@ class HomePage extends StatelessWidget {
 
             SizedBox(height: 24),
 
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 24),
+              child: Divider(),
+            ),
 
-            Divider(),
+            SizedBox(height: 24),
+
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 24),
+              child: Text(
+                'Fresh items',
+                style: TextStyle(
+                  fontSize: 16,
+                ),
+              ),
+            ),
+
+            Expanded(
+              child: GridView.builder(
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2
+                ),
+                itemBuilder: (context, index) {
+                  return GroceryItemTile();
+                }
+              ),
+            ),
           ],
         ),
       ),
